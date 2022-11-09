@@ -207,23 +207,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &742963687 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4268853877515800735, guid: f1e488d529cc44361a6c4dbdfb3938d1, type: 3}
-  m_PrefabInstance: {fileID: 4268853877042342264}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &742963692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 742963687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54c5d4b66c1424def8a13cdac9203361, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1087353159
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,8 +484,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4268853877515800720, guid: f1e488d529cc44361a6c4dbdfb3938d1, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268853877515800720, guid: f1e488d529cc44361a6c4dbdfb3938d1, type: 3}
       propertyPath: m_Interpolate
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268853877515800720, guid: f1e488d529cc44361a6c4dbdfb3938d1, type: 3}
+      propertyPath: m_GravityScale
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 4268853877515800720, guid: f1e488d529cc44361a6c4dbdfb3938d1, type: 3}
       propertyPath: m_SleepingMode
