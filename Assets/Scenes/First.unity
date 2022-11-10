@@ -257,6 +257,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1695038200143988454, guid: 0a8e2b89eda79467f86eea026dc2052b, type: 3}
   m_PrefabInstance: {fileID: 1695038201224166956}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1217899587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4268853877515800735, guid: f1e488d529cc44361a6c4dbdfb3938d1, type: 3}
+  m_PrefabInstance: {fileID: 4268853877042342264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1217899593
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217899587}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca83a1338fc7b40f9a3e0c795cd0469a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1288953299
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,26 +508,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4268853877515800720, guid: f1e488d529cc44361a6c4dbdfb3938d1, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268853877515800720, guid: f1e488d529cc44361a6c4dbdfb3938d1, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268853877515800720, guid: f1e488d529cc44361a6c4dbdfb3938d1, type: 3}
-      propertyPath: m_GravityScale
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268853877515800720, guid: f1e488d529cc44361a6c4dbdfb3938d1, type: 3}
-      propertyPath: m_SleepingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268853877515800720, guid: f1e488d529cc44361a6c4dbdfb3938d1, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4268853877515800723, guid: f1e488d529cc44361a6c4dbdfb3938d1, type: 3}
       propertyPath: m_RootOrder
       value: 2
