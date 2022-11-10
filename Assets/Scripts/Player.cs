@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 
     //Player Stats
     [SerializeField] private float maxSpeed = 10f;
+    [SerializeField] private float jumpHeight = 50f;
    
     //Singleton
     private static Player instance;
@@ -44,5 +45,10 @@ public class Player : MonoBehaviour
             playerSpriteRenderer.flipX = isGoingLeft;
         }
         
+        if (Input.GetButtonDown("Jump")){
+            //playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, playerRigidBody.velocity.y * jumpHeight);
+            playerRigidBody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+        }
     }
+    
 }
