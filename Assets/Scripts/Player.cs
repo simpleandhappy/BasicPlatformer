@@ -33,8 +33,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerRigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * maxSpeed, playerRigidBody.velocity.y);
-        
+        float targetVelocity = Input.GetAxisRaw("Horizontal") * maxSpeed;
+        if (Mathf.Abs(targetVelocity) >= 1){
+            playerRigidBody.velocity = new Vector2(targetVelocity, playerRigidBody.velocity.y);
+        }
+
         //play walk animation
         bool isWalking = playerRigidBody.velocity.x != 0;
         playerAnimator.SetBool("Walk", isWalking);
@@ -46,7 +49,6 @@ public class Player : MonoBehaviour
         }
         
         if (Input.GetButtonDown("Jump")){
-            //playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, playerRigidBody.velocity.y * jumpHeight);
             playerRigidBody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         }
     }
