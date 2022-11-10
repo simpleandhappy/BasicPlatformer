@@ -4,9 +4,7 @@ public class Player : MonoBehaviour
 {
     private Rigidbody2D playerRigidBody;
     private Animator playerAnimator;
-    private Vector2 playerDirection;
-    private Vector2 forward = new Vector2(1, 1);
-    private Vector2 backward = new Vector2(-1, 1);
+    private SpriteRenderer playerSpriteRenderer;
 
     //Player Stats
     [SerializeField] private float maxSpeed = 10f;
@@ -27,7 +25,7 @@ public class Player : MonoBehaviour
     {
         playerRigidBody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
-        playerDirection = forward;
+        playerSpriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 
@@ -36,16 +34,15 @@ public class Player : MonoBehaviour
     {
         playerRigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * maxSpeed, playerRigidBody.velocity.y);
         
+        //play walk animation
         bool isWalking = playerRigidBody.velocity.x != 0;
         playerAnimator.SetBool("Walk", isWalking);
 
-        if (playerRigidBody.velocity.x < -0.01) {
-            playerDirection = backward;
-        } 
-        else if (playerRigidBody.velocity.x > 0.01){
-            playerDirection = forward;
+        //flip player direction
+        if (isWalking){
+            bool isGoingLeft = playerRigidBody.velocity.x < 0;
+            playerSpriteRenderer.flipX = isGoingLeft;
         }
-        transform.localScale = playerDirection;
         
     }
 }
