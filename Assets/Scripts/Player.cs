@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     //Player Stats
     [SerializeField] private float maxSpeed = 10f;
     [SerializeField] private float jumpHeight = 50f;
+    [SerializeField] private int maxHealth = 1000;
+    public int health = 1000;
    
     //Singleton
     private static Player instance;
