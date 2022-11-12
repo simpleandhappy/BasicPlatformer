@@ -17,7 +17,7 @@ public class PlayerOutOfBounds : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D col){
         if (col.gameObject == Player.Instance.gameObject){
-            SceneManager.LoadScene("First");
+            Player.Instance.RestartLevel();
         }
     }
 }

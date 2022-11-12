@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D playerRigidBody;
     private Animator playerAnimator;
     private SpriteRenderer playerSpriteRenderer;
+    public Vector2 startPostion;
 
     //Player Stats
     [SerializeField] private float maxSpeed = 10f;
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour
         playerRigidBody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         playerSpriteRenderer = GetComponent<SpriteRenderer>();
+        startPostion = transform.position;
 
     }
 
@@ -55,13 +57,14 @@ public class Player : MonoBehaviour
             playerRigidBody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         }
 
-        Die();
+        if (health <= 0){
+            RestartLevel();
+        }
     }
 
-    void Die(){
-        if (health <= 0){
-            SceneManager.LoadScene("First");
-        }
+    public void RestartLevel(){
+        health = 1000;
+        transform.position = startPostion;
     }
     
 }
