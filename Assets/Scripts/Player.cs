@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Player : MonoBehaviour
     //Player Stats
     [SerializeField] private float maxSpeed = 10f;
     [SerializeField] private float jumpHeight = 50f;
-    [SerializeField] private int maxHealth = 1000;
+    //[SerializeField] private int maxHealth = 1000;
     public int health = 1000;
    
     //Singleton
@@ -52,6 +53,14 @@ public class Player : MonoBehaviour
         
         if (Input.GetButtonDown("Jump")){
             playerRigidBody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+        }
+
+        Die();
+    }
+
+    void Die(){
+        if (health <= 0){
+            SceneManager.LoadScene("First");
         }
     }
     
