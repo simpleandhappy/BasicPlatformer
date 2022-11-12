@@ -1200,6 +1200,14 @@ PrefabInstance:
       propertyPath: speed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3975664952677674922, guid: 266514d63ef9b423ab8d90b1937658fd, type: 3}
+      propertyPath: _direction.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975664952677674922, guid: 266514d63ef9b423ab8d90b1937658fd, type: 3}
+      propertyPath: _direction.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6287557469985942717, guid: 266514d63ef9b423ab8d90b1937658fd, type: 3}
       propertyPath: m_Name
       value: FlyEnemy
