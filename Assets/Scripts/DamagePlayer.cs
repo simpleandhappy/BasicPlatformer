@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractableDamage : MonoBehaviour
+public class DamagePlayer : MonoBehaviour
 {
    [SerializeField] private int damage = 10;
     // Start is called before the first frame update

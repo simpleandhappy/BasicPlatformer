@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1935689423849531321}
   - component: {fileID: 6244008724812570075}
   - component: {fileID: 98813419802982275}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mushroomBouncy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

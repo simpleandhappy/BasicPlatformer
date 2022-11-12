@@ -11,9 +11,13 @@ public class Player : MonoBehaviour
     //Player Stats
     [SerializeField] private float maxSpeed = 10f;
     [SerializeField] private float jumpHeight = 50f;
+    [SerializeField] private int maxJumps = 20;
     //[SerializeField] private int maxHealth = 1000;
     public int health = 1000;
-   
+    
+    //helper vars
+    public int jumpCounter;
+
     //Singleton
     private static Player instance;
     public static Player Instance
@@ -32,6 +36,7 @@ public class Player : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         playerSpriteRenderer = GetComponent<SpriteRenderer>();
         startPostion = transform.position;
+        jumpCounter = 0;
 
     }
 
@@ -53,12 +58,19 @@ public class Player : MonoBehaviour
             playerSpriteRenderer.flipX = isGoingLeft;
         }
         
-        if (Input.GetButtonDown("Jump")){
+        if (Input.GetButtonDown("Jump") && jumpCounter < maxJumps){
             playerRigidBody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+            jumpCounter++;
         }
 
         if (health <= 0){
             RestartLevel();
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision){
+        if (collision.gameObject.layer == LayerMask.NameToLayer("ResetJump")){
+            jumpCounter = 0;
         }
     }
 

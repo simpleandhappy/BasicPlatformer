@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 463692387987794528}
   - component: {fileID: 1612580282217469602}
   - component: {fileID: 626138477405838815}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: snowSlippery
   m_TagString: Untagged
   m_Icon: {fileID: 0}

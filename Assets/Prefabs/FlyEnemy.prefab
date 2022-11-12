@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6287557469985942719}
   - component: {fileID: 6287557469985942716}
   - component: {fileID: 3975664952677674922}
+  - component: {fileID: 4064102604461510549}
   - component: {fileID: 3708390263864988731}
   m_Layer: 0
   m_Name: FlyEnemy
@@ -119,7 +120,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b9e0abb5b8334925a79b7e9a461e30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  _speed: 2
+  _maxDistance: 2
+  _direction: {x: 0, y: 1}
+--- !u!114 &4064102604461510549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6287557469985942717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 958dae824a97246a79d3e114d1f1a8f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   damage: 100
 --- !u!61 &3708390263864988731
 BoxCollider2D:
